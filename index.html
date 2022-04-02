@@ -31,6 +31,7 @@
 			margin-left: 35%;
 			margin-right: 35%;
 			padding: 20px;
+			overflow-wrap: break-word;
 		}
 
 		#history-list h1 {
@@ -110,6 +111,7 @@
 		$(function () {
 
 			var history = new Array();
+
 			var i = 0;
 			// Specify an onclick function
 			// for the generate button
@@ -142,7 +144,7 @@
 					(history[x]);
 				}
 
-				document.getElementById("thelist").innerHTML = history;
+				document.getElementById("thelist").innerHTML = history.join('\n');
 
 			});
 		});
